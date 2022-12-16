@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+:root {
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --mainBG: hsl(217, 54%, 11%);
+    --cardBG: hsl(216, 50%, 16%);
+    --line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    background: var(--mainBG);
+    color: var(--White);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.container {
+    background-color: var(--cardBG);
+    position: relative;
+    height: 70%;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    box-shadow: 0px 26px 38px -6px rgba(0, 0, 0, 0.72);
+    -webkit-box-shadow: 0px 26px 38px -6px rgba(0, 0, 0, 0.72);
+    -moz-box-shadow: 0px 26px 38px -6px rgba(0, 0, 0, 0.72);
+}
+
+.container .image {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 1.5em;
+    position: relative;
+    cursor: pointer;
+}
+
+.container .image img {
+    width: 88%;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--Cyan);
+    overflow: hidden;
+    width: 88%;
+    height: 0;
+    transition: .5s ease;
+    margin: auto;
+    border-radius: 8px;
+    opacity: 0.75;
+}
+
+a {
+    text-decoration: none;
+    color: var(--White);
+}
+
+a:hover {
+    color: var(--Cyan);
+}
+
+.image:hover .overlay {
+    height: 100%;
+}
+
+.overlay-img {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.overlay img {
+    margin: 0;
+}
+
+.container .text,
+.container .copyright {
+    width: 88%;
+}
+
+.container .text h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.container .text p {
+    font-size: 18px;
+    font-weight: 300;
+    color: var(--Softblue);
+    margin-bottom: 1rem;
+}
+
+.container .crypto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+}
+
+.crypto h3 {
+    font-size: 1rem;
+    color: var(--Cyan);
+    font-weight: 400;
+}
+
+.crypto p {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.crypto span img {
+    margin: 2px 5px;
+    margin-bottom: -2px;
+}
+
+.container hr {
+    color: var(--line);
+    opacity: 0.1;
+    width: 88%;
+    /* margin: 1rem 0; */
+}
+
+.container .copyright {
+    display: flex;
+    flex-direction: row;
+    margin: 1.5rem;
+}
+
+.copyright img {
+    height: 1.8rem;
+    width: 1.8rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+}
+
+.copyright h3 {
+    color: var(--Softblue);
+    font-weight: 300;
+}
+
+.copyright h3 span {
+    color: var(--White);
+}
+
+
+@media(max-width:375px) {
+    .container {
+        width: 80%;
+        height: 65%;
+    }
+}
